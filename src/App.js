@@ -15,23 +15,24 @@ import HashHistory from "./history/history";
 function App() {
   // const history = createBrowserHistory({forceRefresh: true});
   return (
-    <HashRouter basename={process.env.PUBLIC_URL} history={history}>
+    <Router  history={history}>
       <div className="App">
         <Switch>
           <Route
-            exact
-            path={process.env.PUBLIC_URL + "/account"}
+            path= "/account"
             component={AccountAction}
           />
           <Route
-          exact
-            path={process.env.PUBLIC_URL + "/"}
+            path= "/"
             component={HomePage}
           />
         </Switch>
       </div>
-    </HashRouter>
+    </Router>
   );
 }
 
 export default App;
+
+// basename={process.env.PUBLIC_URL}
+// process.env.PUBLIC_URL +
