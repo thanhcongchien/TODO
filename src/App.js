@@ -19,12 +19,10 @@ function App() {
       <div className="App">
         <Switch>
           <Route
-            exact
             path={process.env.PUBLIC_URL + "/account"}
             component={AccountAction}
           />
           <Route
-            exact
             path={process.env.PUBLIC_URL + "/"}
             component={HomePage}
           />
