@@ -15,20 +15,14 @@ import HashHistory from "./history/history";
 function App() {
   // const history = createBrowserHistory({forceRefresh: true});
   return (
-    <Router  history={history}>
+    <BrowserRouter basename="/TODO" history={history}>
       <div className="App">
         <Switch>
-          <Route
-            path= "/account"
-            component={AccountAction}
-          />
-          <Route
-            path= "/"
-            component={HomePage}
-          />
+          <Route path="/account" component={AccountAction} />
+          <Route path="/" component={HomePage} />
         </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
